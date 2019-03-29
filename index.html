@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>calendar</title>
+    <style>
+      * {
+        margin : 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<script>
+fnResize();
+window.onresize = function () {
+  fnResize();
+}
+function fnResize() {
+  var deviceWidth = document.documentElement.clientWidth || window.innerWidth;
+  if (deviceWidth >= 750) {
+    deviceWidth = 750;
+  }
+  if (deviceWidth <= 320) {
+    deviceWidth = 320;
+  }
+  document.documentElement.style.fontSize = (deviceWidth / 18) + 'px';
+}
+</script>
